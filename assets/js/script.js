@@ -1,9 +1,9 @@
 $(function () {
-    $(document).on('click', '#submitBtn', function (event) {
+    $(document).on('click', '#ingredientBtn', function (event) {
         event.preventDefault();
         formSubmit();
     });
-    $(document).on('keypress', '#fname', function (event) {
+    $(document).on('keypress', '#ingredients', function (event) {
         if (event.key === 'Enter'){
         event.preventDefault();
         formSubmit();
@@ -11,10 +11,15 @@ $(function () {
     });
     function formSubmit() {
         var listContainer = $('#container');
-        var ingredients = $('#fname').val();
+        var ingredients = $('#ingredients').val();
         var ingredientList = $('<li>');
-        ingredientList.text(ingredients);
+        if (ingredients.trim() === '') {
+            $('#ingredients').val('');
+            ingredients.attr('placeholder', 'Add the ingredients you have here!');
+            return;
+        }
+        ingredientList.text(ingredients.trim());
         listContainer.append(ingredientList);
-        $('#fname').val('');
+        $('#ingredients').val('');
     }
 })
