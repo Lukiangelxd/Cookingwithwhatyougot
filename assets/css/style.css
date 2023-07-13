@@ -39,7 +39,7 @@ a {
     text-decoration: none;
 }
 
-li {
+.header-li {
     float:left;
     padding: 5px 0px 5px 5px;
     font-family: Arial, Helvetica, sans-serif;
