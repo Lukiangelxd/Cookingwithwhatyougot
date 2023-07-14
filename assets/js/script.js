@@ -19,22 +19,28 @@ $(function () {
             return;
         }
         ingredientList.text(ingredients.trim());
-        listContainer.append(ingredientList);
+        listContainer.append(ingredientList).addClass(listedItems);
         $('#ingredients').val('');
     }
     $(document).on('click', '#generateBtn', function(event) {
         event.preventDefault();
         displayRecipes();
     })
+    
+    var apiUrl = 'https://api.spoonacular.com/recipes/complexSearch';
+    var apiKey = 'b70ec2d513aa1a6ac6fbc26bbc3410906bb8f2be';
+    var recipeContainer = $('#recipeContainer');
+    var mealType = getMealType($('#mealType').val());
+    
+    function getMealType() {
+        if ($('#mealType').val() === '1') {
+            return 'breakfast';
+        }
+        if ($('#mealType').val() === '2') {
+            return 'snack';
+        }
+        if ($('#mealType').val() === '3') {
+            return 'main-course'
+        }
+    };
 })
-
-var apiUrl = 'https://api.spoonacular.com/recipes/findByIngredients';
-var apiKey = 'b70ec2d513aa1a6ac6fbc26bbc3410906bb8f2be';
-var recipeContainer = $('#recipeContainer');
-var mealType = $('#mealType').val();
-
-var parameters = {
-    ingredients: ingredients,
-    apiKey: apiKey,
-
-};
