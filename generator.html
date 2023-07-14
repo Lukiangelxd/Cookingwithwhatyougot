@@ -29,13 +29,14 @@
     <form>
         <select id="mealType" class="form-select" aria-label="Default select example">
             <option selected>Choose your meal type!</option>
-            <option value="1">Breakfast</option>
-            <option value="2">Snack</option>
-            <option value="3">Dinner</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="snack">Snack</option>
+            <option value="main+course">Dinner</option>
           </select>
         <input type="text" id="ingredients" placeholder="Add the ingredients you have here!"><br>
         <button id="ingredientBtn">Add Ingredient</button>
         <button id="saveBtn">Save Recipe</button>
+        <button id="generateBtn">Generate Recipes!</button>
     </form>
     <div id="recipeContainer"></div>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
