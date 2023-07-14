@@ -67,11 +67,37 @@ header nav a:visited {
     text-shadow: 5px 3px 3px rgb(4, 128, 25);
 }
 
-/*This is a start for the Generator */ 
-.listeditems {
-    display: flex;
-    align-content: flex-start;
-    border-style: solid rgb(4, 128, 25);
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 30px 0px;
+p {
+    border: solid 2px black;
+    border-radius: 7px;
+    text-align: center;
+    width: 1095px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:x-large;
+}
+
+#selector {
+    width: 17%;
+}
+
+#ingredients {
+    width: 365px;
+}
+
+#ingredientBtn {
+    width: 189px;
+}
+
+#ingredients, #ingredientBtn, #selector {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 21px;
+}
+
+form {
+    margin-top: 67px;
 }
