@@ -78,6 +78,26 @@ p {
     font-size:x-large;
 }
 
+/*This is a start for the Geenerator */ 
+.listeditems {
+    display: flex;
+    align-content: flex-start;
+    border-style: solid rgb(4, 128, 25);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px 0px;
+}
+
+/*This is for the About Us Page on Home */
+
+.nameabout {
+    font-size: 25px;
+}
+
+.description-paragraphs {
+    font-size: 15px;
+}
+
+
 #selector {
     width: 17%;
 }
