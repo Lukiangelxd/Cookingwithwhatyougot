@@ -66,25 +66,3 @@ header nav a:visited {
     color:white;
     text-shadow: 5px 3px 3px rgb(4, 128, 25);
 }
-
-/*This is a start for the Generator */ 
-.listeditems {
-    display: flex;
-    align-content: flex-start;
-    border-style: solid rgb(4, 128, 25);
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 30px 0px;
-}
-
-
-
-
-/*This is for the About Us Page */
-
-.nameabout {
-    font-size: 25px;
-}
-
-.description-paragraphs {
-    font-size: 15px;
-}
