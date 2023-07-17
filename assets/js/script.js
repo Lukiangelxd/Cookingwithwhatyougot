@@ -62,10 +62,44 @@ $(function () {
             var recipeLink = $('<a>').attr('href', recipe.sourceUrl);
             var recipeImage = $('<img>').attr('src', recipe.image).attr('alt', recipe.title);
             var recipeTitle = $('<h3>').text(recipe.title);
-            recipeLink.append(recipeImage, recipeTitle)
-            recipeCard.append(recipeLink);
+            recipeLink.append(recipeImage, recipeTitle);
+            var saveBtn = $('<button>').text('Save');
+            saveBtn.on('click', function() {
+                saveRecipe(recipe.title, recipe.sourceUrl, recipe.image);
+            });
+            recipeCard.append(recipeLink, saveBtn);
             recipeContainer.append(recipeCard);
         }
+    }
+
+    function saveRecipe(title, sourceUrl, image) {
+        var savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
+        var recipeObject = {
+            title: title,
+            sourceUrl: sourceUrl,
+            image: image
+        };
+        savedRecipes.push(recipeObject);
+        localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes));
+    };
+
+    function displaySavedRecipes() {
+        var savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
+        var savedContainer = $('#savedContainer');
+        savedContainer.empty()
+        for (var i = 0; i < savedRecipes.length; i++) {
+            var recipe = savedRecipes[i];
+            var savedCard = $('<div>').addClass('recipe-card');
+            var savedLink = $('<a>').attr('href', recipe.sourceUrl);
+            var savedImage = $('<img>').attr('src', recipe.image).attr('alt', recipe.title);
+            var savedTitle = $('<h3>').text(recipe.title);
+            savedLink.append(savedImage, savedTitle);
+            savedCard.append(savedLink);
+            savedContainer.append(savedCard);
+        }
+    }
+    if(window.location.pathname.includes('saved.html')) {
+        displaySavedRecipes();
     }
 
 })
