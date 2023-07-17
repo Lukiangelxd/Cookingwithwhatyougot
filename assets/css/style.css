@@ -7,29 +7,35 @@
 
 html {
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     height: 100%;
     text-decoration: none;
   }
 
-header {
-    background-color: rgb(39, 157, 39);
+body {
+    background-color: rgb(165, 247, 165);
+}
+
+/* This covers the header title on all pages*/
+.mainheader {
+    background-color: rgb(65, 173, 65);
     justify-content: space-around;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 40px;
     margin: 15px;
-    height: 90px;
+    height: 120px;
     border: 5px;
     border-style: solid;
-    border-color: green;
+    border-color: rgb(16, 140, 16);
 }
 
-h1 {
+/*nav bar on all pages*/
+.mainh1nav {
     color: white;
-    padding-top: 10px;
-    font-size:x-large;
+    padding-top: 20px;
+    font-size:40px;
     text-align: center;
     text-shadow: 5px 3px 3px rgb(4, 128, 25);
 }
@@ -37,19 +43,17 @@ h1 {
 a {
     text-decoration: none;
 }
-
+/* nav links to help stay in place on all pages */ 
 .header-li {
     float:left;
-    padding: 5px 0px 5px 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
     color: white; 
-    font-size: medium;
+    font-size: 20px;
     text-shadow: 5px rgb(4, 128, 25);
-    
-
+    text-decoration: none;
   }
 
-
+/* interactions with links on nav on all pages */
 header nav a:link {
     padding-left: 5px;
     padding-right: 5px;
@@ -64,18 +68,114 @@ header nav a:visited {
     text-shadow: 5px 3px 3px rgb(4, 128, 25);
 }
 
-p {
-    border: solid 2px black;
-    border-radius: 7px;
-    text-align: center;
-    width: 1095px;
+/* Main page div containing info to generator */
+.generatordiv {
+    border: 5px rgb(16, 140, 16);
+    border-style: solid;
+    background-color: rgb(212, 255, 221);
+    border-radius: 20px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px;
     font-size:x-large;
+
+}
+.generatordivburger {
+    height: 400px;
+    flex: auto;
+    position: relative;
+    border-radius: 40px;
+    margin: 50px;
 }
 
-/*This is a start for the Geenerator */ 
+.h2seconddivforfrontpage {
+    text-align: center;
+    padding: 20px;
+    text-shadow: 2px 2px 2px rgb(73, 149, 86);
+}
+.seconddivforfrontpage {
+    width: 50%;
+    float: right;
+    text-align: center;
+    padding: 40px;
+}
+
+/*Button To take over to Generator  */
+.buttonfrontpage {
+    background-color: rgb(244, 209, 121);
+    border: none;
+    color: rgb(0, 0, 0);
+    font-family:'Times New Roman', Times, serif;
+    text-shadow: rgb(219, 181, 84);
+    padding: 15px 32px;
+    margin: 40px;
+    height: 50px;
+    border: goldenrod;
+    border-radius: 10px;
+    border-style: dashed;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .buttonfrontpage:hover {
+    border-style: solid;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+/*This is the About section. */
+/*Needs Attention*/
+.aboutdiv {
+    border: 5px rgb(16, 140, 16);
+    border-style: solid;
+    margin: 50px;
+    border-radius: 20px;
+    background-color: rgb(212, 255, 221);
+}
+
+.profileimg {
+    height: 300px;
+    flex: auto;
+    position: relative;
+    border-radius: 40px;
+    margin: 50px;
+}
+
+.name {
+    align-items: end;
+}
+.description-paragraphs {
+    float: right;
+}
+
+/*This is the form for Contact Us*/
+
+form {
+    border: 5px rgb(16, 140, 16);
+    border-style: solid;
+    background-color: rgb(212, 255, 221);
+    border-radius: 20px;
+    display: block;
+    margin: 50px;
+    font-size:medium;
+    padding: 30px;
+}
+
+h3 {
+
+}
+
+p {
+
+}
+
+.envelope {
+    border-radius: 25px;
+}
+
+
+/*This is a start for the Generator */ 
 .listeditems {
     display: flex;
     align-content: flex-start;
@@ -83,17 +183,6 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     padding: 30px 0px;
 }
-
-/*This is for the About Us Page on Home */
-
-.nameabout {
-    font-size: 25px;
-}
-
-.description-paragraphs {
-    font-size: 15px;
-}
-
 
 #selector {
     width: 17%;

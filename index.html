@@ -7,28 +7,48 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Cooking With What You Got</title>
 </head>
+<!--This is the Nav Bar that will have the same title on all pages and same style-->
 <body>
-    <header>
-        <h1 class="logo">Cooking With What You Got!</h1>
+    <header class="mainheader">
+        <h1 class="mainh1nav">Cooking With What You Got!</h1>
         <nav>
           <ul>
             <li class="header-li"><a href="index.html">Home</a></li>
             <li class="header-li"><a href="generator.html">The Generator</a></li>
             <li class="header-li"><a href="saved.html">Saved Dishes</a></li>
-            <li class="header-li">Contacts</li>
+            <li class="header-li">Contacts Us!</li>
           </ul>
         </nav>
       </header>
-      <div>
-        <img src="" alt="">
-        <p class="nameabout">Chris</p>
+      <!--This is the first div of the Main page. States purpose and links to third party API-->
+      <div class="generatordiv">
+        <img src="assets/image/Burger copy.jpg" class="generatordivburger" alt="burger logo for website">
+        <div class="seconddivforfrontpage">
+        <h2 class="h2seconddivforfrontpage">Welcome to Cooking with what you got!</h2>
+        <p>Our team is proud to serve you and your budgets needs with this newly designed recipe generator! Using the technology of a third party API, we are able to take the limited supplies you have in your kicthe to give you personally sculpted dishes tailored just to you.</p>
+        <!--Interactive Button-->
+        <button class="buttonfrontpage">Let's Make Some Magic!</button>
+      </div>
+      </div>
+      <!--About Page for Teamates who worked on project together-->
+      <div class="aboutdiv">
+        <img src="assets/image/Christopher Lunsford.JPG" alt="Chris about me photo" class="profileimg">
+        <p class="name">Chris</p>
+        <!--Chris needs info-->
         <p class="description-paragraphs">I am chris chris chris chris.............</p>
-        <img src="./assets/image/Hannah McEvoy.jpg" alt="picture of Hannah">
-        <p>Hannah</p>
-        <img src="./assets/image/Wren Johnson.jpg" alt="picture of wren">
-        <p>Wren</p>
+        <img src="./assets/image/Hannah McEvoy.jpg" alt="picture of Hannah" class="profileimg">
+        <p class="name">Hannah</p>
+        <!--Hannah needs info-->
+        <p class="description-paragraphs">I am Hannah hannah hannah......</p>
+        <img src="./assets/image/Wren Johnson.jpg" alt="picture of wren" class="profileimg">
+        <p class="name">Wren</p>
+        <!--Wren needs info-->
+        <p class="description-paragraphs">I am wren wren wren..........</p>
       </div>
       <form>
+        <h3>Contact Us!</h3>
+        <p>Our team would really appreciate any feedback! Leav your name, email and a brief message in the form to the right. Thank you</p>
+        <img src="assets/image/envelope.jpg" alt="a blue envelope" class="envelope">
         <label for="fname">First name:</label><br>
         <input type="text" id="fname" name="fname" value=""><br>
         <label for="lname">Last name:</label><br>
