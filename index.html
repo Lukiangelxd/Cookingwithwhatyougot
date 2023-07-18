@@ -10,10 +10,10 @@
 </head>
 <!--This is the Nav Bar that will have the same title on all pages and same style-->
 <body>
-    <header id="mainheader" class="is-link">
+    <header id="mainheader" class="is-white box">
         <h1 id="mainh1nav" class="is-size-1 has-text-centered">Cooking With What You Got!</h1>
-        <nav class="pb-3">
-          <ul id="header-li" class="is-size-4 has-text-centered columns is-mobile">
+        <nav>
+          <ul class="is-size-4 has-text-centered columns is-mobile">
             <li class="column"><a href="index.html">Home</a></li>
             <li class="column"><a href="generator.html">The Generator</a></li>
             <li class="column"><a href="saved.html">Saved Dishes</a></li>
@@ -22,8 +22,8 @@
         </nav>
       </header>
       <!--This is the first div of the Main page. States purpose and links to third party API-->
-      <div id="generatordiv">
-        <img src="assets/image/Burger copy.jpg" id="generatordivburger" alt="burger logo for website">
+      <div>
+        <img src="assets/image/Burger copy.jpg" class="generatordivburger" alt="burger logo for website">
         <div>
         <h2 id="h2seconddivforfrontpage" class="is-size-2">Welcome to Cooking with what you got!</h2>
         <p>Our team is proud to serve you and your budgets needs with this newly designed recipe generator! Using the technology of a third party API, we are able to take the limited supplies you have in your kicthe to give you personally sculpted dishes tailored just to you.</p>
@@ -32,7 +32,7 @@
       </div>
       </div>
       <!--About Page for Teamates who worked on project together-->
-      <div id="aboutdiv">
+      <div>
         <img src="assets/image/Christopher Lunsford.JPG" alt="Chris about me photo" >
         <h3 class="is-size-3 has-text-weight-semibold">Chris</h3>
         <!--Chris needs info-->
@@ -45,8 +45,10 @@
         <h3 class="is-size-3 has-text-weight-semibold">Wren</h3>
         <!--Wren needs info-->
         <p>I am wren wren wren..........</p>
+        </div>
       </div>
-      <form>
+      <form class="section">
+        <div class="container">
         <h3>Contact Us!</h3>
         <p>Our team would really appreciate any feedback! Leav your name, email and a brief message in the form to the right. Thank you</p>
         <img src="assets/image/envelope.jpg" alt="a blue envelope">
@@ -55,6 +57,7 @@
         <label for="lname">Last name:</label><br>
         <input type="text" id="lname" name="lname" value=""><br><br>
         <input type="submit" value="Submit" id="submitBtn">
+        </div>
       </form>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>  
     <script src="./assets/js/script.js"></script>
