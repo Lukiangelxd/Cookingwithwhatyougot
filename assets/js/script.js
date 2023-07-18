@@ -20,6 +20,11 @@ $(function () {
             return;
         }
         ingredientList.text(ingredients);
+        var removeBtn = $('<button>').text('Remove');
+        removeBtn.on('click', function() {
+            ingredientList.remove();
+        });
+        ingredientList.append(removeBtn);
         listContainer.append(ingredientList);
         $('#ingredients').val('');
     }
@@ -38,9 +43,19 @@ $(function () {
         
         fetchRecipes(ingredientsArray, mealType)
         .then(data => {
+            if(data.results.length === 0){
+                displayError()
+            } else {
             displayRecipes(data.results)
-        });
+    }});
     };
+
+    function displayError() {
+        var recipeContainer = $('#recipeContainer');
+        recipeContainer.empty()
+        var errorMessage = $('</p>').text('No recipes found that include all the above ingredients. Please amend your ingredient list and try again!');
+        recipeContainer.append(errorMessage);
+    }
 
     function fetchRecipes(ingredientsArray, mealType) {
         var apiKey = 'c6db27357d8f494387f67c1e0ada60f5';
@@ -59,8 +74,7 @@ $(function () {
         recipeContainer.empty();
         for (var i = 0; i < recipes.length; i++) {
             var recipe = recipes[i];
-            // Change class name for styling.
-            var recipeCard = $('<div>').addClass('recipe-card');
+            var recipeCard = $('<div>');
             var recipeLink = $('<a>').attr('href', recipe.sourceUrl);
             var recipeImage = $('<img>').attr('src', recipe.image).attr('alt', recipe.title);
             var recipeTitle = $('<h3>').text(recipe.title);
@@ -91,8 +105,7 @@ $(function () {
         savedContainer.empty()
         for (var i = 0; i < savedRecipes.length; i++) {
             var recipe = savedRecipes[i];
-            // Change class name for styling.
-            var savedCard = $('<div>').addClass('recipe-card');
+            var savedCard = $('<div>');
             var savedLink = $('<a>').attr('href', recipe.sourceUrl);
             var savedImage = $('<img>').attr('src', recipe.image).attr('alt', recipe.title);
             var savedTitle = $('<h3>').text(recipe.title);
