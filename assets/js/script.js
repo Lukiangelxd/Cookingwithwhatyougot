@@ -104,4 +104,58 @@ $(function () {
         displaySavedRecipes();
     }
 
+    $(document).on('click', '#groceryBtn', function(event) {
+        event.preventDefault();
+        findNearbyRestaurants();
+    });
+
+    function findNearbyRestaurants() {
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+                fetchNearbyRestaurants(latitude, longitude)
+                .then(data => {
+                    displayNearbyRestaurants(data.results);
+                })
+            }
+        )};
+
+    function fetchNearbyRestaurants(latitude, longitude) {
+        var apiKey = 'fsq3uVo1P0UFY6J835VuN/deQOPLxB9ICLoktV/VLobsxwc=';
+        var apiUrl = 'https://api.foursquare.com/v3/places/search';
+        var queryParams = {
+            query: 'restaurant',
+            ll: `${latitude},${longitude}`,
+            limit: 10,
+        };
+        var queryString = new URLSearchParams(queryParams);
+        var queryUrl = `${apiUrl}?${queryString}`;
+        return fetch(queryUrl, {
+            headers: {
+                Authorization: `${apiKey}`,
+                accept: 'application/json'
+            }
+            })
+        .then(response => response.json())
+        .then(data => {
+            return data;
+        })
+    };
+
+    function displayNearbyRestaurants(restaurants) {
+        var restaurantContainer = $('#restaurantContainer');
+        restaurantContainer.empty();
+        for (var i = 0; i < restaurants.length; i++) {
+            var restaurant = restaurants[i];
+            var restaurantCard = $('<div>');
+            var restaurantLink = $('<a>').attr('href', `https://foursquare.com/v/${restaurant.fsq_id}`);
+            var restaurantTitle = $('<h3>').text(restaurant.name);
+            restaurantLink.append(restaurantTitle);
+            restaurantCard.append(restaurantLink);
+            restaurantContainer.append(restaurantCard);
+        }
+    };
+
+
 })
