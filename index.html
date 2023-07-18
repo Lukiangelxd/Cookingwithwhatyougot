@@ -4,45 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Cooking With What You Got</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <!--This is the Nav Bar that will have the same title on all pages and same style-->
 <body>
-    <header id="mainheader" class="is-white box">
+    <header id="mainheader" class="is-link">
         <h1 id="mainh1nav" class="is-size-1 has-text-centered">Cooking With What You Got!</h1>
-        <nav>
-          <ul class="is-size-4 has-text-centered columns is-mobile">
+        <nav class="pb-3">
+          <ul id="header-li" class="is-size-4 has-text-centered columns is-mobile">
             <li class="column"><a href="index.html">Home</a></li>
             <li class="column"><a href="generator.html">The Generator</a></li>
             <li class="column"><a href="saved.html">Saved Dishes</a></li>
-            <li class="column">Contacts Us!</li>
+            <li class="column"><a href="#">Contacts Us!</a></li>
           </ul>
         </nav>
       </header>
       <!--This is the first div of the Main page. States purpose and links to third party API-->
-      <div>
-        <img src="assets/image/Burger copy.jpg" class="generatordivburger" alt="burger logo for website">
+      <div id="generatordiv">
+        <img src="assets/image/Burger copy.jpg" id="generatordivburger" alt="burger logo for website">
         <div>
-        <h2 class="is-size-2">Welcome to Cooking with what you got!</h2>
+        <h2 id="h2seconddivforfrontpage" class="is-size-2">Welcome to Cooking with what you got!</h2>
         <p>Our team is proud to serve you and your budgets needs with this newly designed recipe generator! Using the technology of a third party API, we are able to take the limited supplies you have in your kicthe to give you personally sculpted dishes tailored just to you.</p>
         <!--Interactive Button-->
         <button>Let's Make Some Magic!</button>
       </div>
       </div>
       <!--About Page for Teamates who worked on project together-->
-      <div>
+      <div id="aboutdiv">
         <img src="assets/image/Christopher Lunsford.JPG" alt="Chris about me photo" >
-        <p>Chris</p>
+        <h3 class="is-size-3 has-text-weight-semibold">Chris</h3>
         <!--Chris needs info-->
         <p>I am chris chris chris chris.............</p>
         <img src="./assets/image/Hannah McEvoy.jpg" alt="picture of Hannah" >
-        <p>Hannah</p>
+        <h3 class="is-size-3 has-text-weight-semibold">Hannah</h3>
         <!--Hannah needs info-->
         <p>I am Hannah hannah hannah......</p>
         <img src="./assets/image/Wren Johnson.jpg" alt="picture of wren">
-        <p >Wren</p>
+        <h3 class="is-size-3 has-text-weight-semibold">Wren</h3>
         <!--Wren needs info-->
         <p>I am wren wren wren..........</p>
       </div>
