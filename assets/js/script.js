@@ -1,3 +1,4 @@
+
 $(function () {
     $(document).on('click', '#ingredientBtn', function (event) {
         event.preventDefault();
