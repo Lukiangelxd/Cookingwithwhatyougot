@@ -58,6 +58,7 @@ $(function () {
         recipeContainer.empty();
         for (var i = 0; i < recipes.length; i++) {
             var recipe = recipes[i];
+            // Change class name for styling.
             var recipeCard = $('<div>').addClass('recipe-card');
             var recipeLink = $('<a>').attr('href', recipe.sourceUrl);
             var recipeImage = $('<img>').attr('src', recipe.image).attr('alt', recipe.title);
@@ -89,6 +90,7 @@ $(function () {
         savedContainer.empty()
         for (var i = 0; i < savedRecipes.length; i++) {
             var recipe = savedRecipes[i];
+            // Change class name for styling.
             var savedCard = $('<div>').addClass('recipe-card');
             var savedLink = $('<a>').attr('href', recipe.sourceUrl);
             var savedImage = $('<img>').attr('src', recipe.image).attr('alt', recipe.title);
