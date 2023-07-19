@@ -56,26 +56,33 @@ a {
     text-shadow: 2px 2px 2px rgb(73, 149, 86);
 }
 
+img {
+  border-radius: 10px;
+}
 /*Button To take over to Generator  */
-.buttonfrontpage {
+#navBtn {
     background-color: rgb(244, 209, 121);
     border: none;
     color: rgb(0, 0, 0);
     font-family:'Times New Roman', Times, serif;
     text-shadow: rgb(219, 181, 84);
     padding: 15px 32px;
-    margin: 40px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px; 
     height: 50px;
     border: goldenrod;
     border-radius: 10px;
     border-style: dashed;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 16px;
+
   }
 
-  .buttonfrontpage:hover {
+ #navBtn:hover {
     border-style: solid;
     font-style: italic;
     font-weight: bold;
@@ -92,7 +99,7 @@ a {
     background-color: rgb(212, 255, 221);
 }
 
-img {
+#img {
     border-radius: 40px;
 }
 
