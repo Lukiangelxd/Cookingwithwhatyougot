@@ -19,7 +19,6 @@
             <li class="column"><a href="index.html">Home</a></li>
             <li class="column"><a href="generator.html">The Generator</a></li>
             <li class="column"><a href="saved.html">Saved Dishes</a></li>
-            <li class="column"><a href="#">Contacts Us!</a></li>
           </ul>
         </nav>
       </header>
@@ -33,40 +32,60 @@
             <div class="column is-size-4 is-6-tablet is-7-desktop">
               <h1 class="is-size-3-mobile is-size-1-desktop title">Welcome to Cooking with what you got!</h1>
               <p>Our team is proud to serve you and your budgets needs with this newly designed recipe generator! Using the technology of a third party API, we are able to take the limited supplies you have in your kicthe to give you personally sculpted dishes tailored just to you.</p>
-              <button id="navBtn">Let's Make Some Magic!</button>
+              <button class="buttonfrontpage" id="navBtn">Let's Make Some Magic!</button>
             </div>
           </div>
         </div>
       </section>
   
       <!--About Page for Teamates who worked on project together-->
-      <div>
-        <img src="assets/image/Christopher Lunsford.JPG" alt="Chris about me photo" >
-        <h3 class="is-size-3 has-text-weight-semibold">Chris</h3>
-        <!--Chris needs info-->
-        <p>Hello! I'm Chris, one of the co-developers on this project. This project was exciting to work on as it allowed me to gain practical experience working with JavaScript, jQuery, and APIs in a team environment. I additionally gained a deeper understanding of working through GitHub feature branches and I look forward to continuing to put these skills to professional use.</p>
-        <img src="./assets/image/Hannah McEvoy.jpg" alt="picture of Hannah" >
-        <h3 class="is-size-3 has-text-weight-semibold">Hannah</h3>
-        <!--Hannah needs info-->
-        <p>Hey I'm Hannah and in the first group project of the class our team has chosen to go with a recipe generator! I love this choice because I am a self taught baker at home with a tiny budget. My key positions in this group project is creating the wireframing of the webpage using photoshop, choosing a CSS framework and being the overall overseer of the project.</p>
-        <img src="./assets/image/Wren Johnson.jpg" alt="picture of wren">
-        <h3 class="is-size-3 has-text-weight-semibold">Wren</h3>
-        <!--Wren needs info-->
-        <p>Greetings! I'm Wren, one of the three developers working on this project. This was an exciting first project working with others. It has allowed me to further improve my skills using HTML, CSS, GitBash and GitHub along with teaching Bulma and working in an group setting.</p>
-        </div>
-      </div>
-      <form class="section">
+      <div id="aboutdiv">
+      <section class="section">
         <div class="container">
-        <h3>Contact Us!</h3>
-        <p>Our team would really appreciate any feedback! Leav your name, email and a brief message in the form to the right. Thank you</p>
-        <img src="assets/image/envelope.jpg" alt="a blue envelope">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value=""><br><br>
-        <input type="submit" value="Submit" id="submitBtn">
+          <div class="columns is-vcentered is-multiline">
+            <div class="column is-6-tablet is-5-desktop has-text-centered">
+              <img src="./assets/image/Christopher Lunsford.JPG" alt="docker coffee image" class="px-6">
+            </div>
+            <div class="column is-size-4 is-6-tablet is-7-desktop">
+              <h1 class="is-size-3-mobile is-size-1-desktop title">Chris</h1>
+              <p>Hello! I'm Chris, one of the co-developers on this project. This project was exciting to work on as it allowed me to gain practical experience working with JavaScript, jQuery, and APIs in a team environment. I additionally gained a deeper understanding of working through GitHub feature branches and I look forward to continuing to put these skills to professional use.</p>
+            </div>
+          </div>
         </div>
-      </form>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="columns is-vcentered is-multiline">
+            <div class="column is-6-tablet is-5-desktop has-text-centered">
+              <img src="./assets/image/Hannah McEvoy.jpg" alt="docker coffee image" class="px-6">
+            </div>
+            <div class="column is-size-4 is-6-tablet is-7-desktop">
+              <h1 class="is-size-3-mobile is-size-1-desktop title">Hannah</h1>
+              <p> <p>Hey I'm Hannah and in the first group project of the class our team has chosen to go with a recipe generator! I love this choice because I am a self taught baker at home with a tiny budget. My key positions in this group project is creating the wireframing of the webpage using photoshop, choosing a CSS framework and being the overall overseer of the project.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="columns is-vcentered is-multiline">
+            <div class="column is-6-tablet is-5-desktop has-text-centered">
+              <img src="./assets/image/Wren Johnson.jpg" alt="docker coffee image" class="px-6">
+            </div>
+            <div class="column is-size-4 is-6-tablet is-7-desktop">
+              <h1 class="is-size-3-mobile is-size-1-desktop title">Wren</h1>
+              <p>Greetings! I'm Wren, one of the three developers working on this project. This was an exciting first project working with others. It has allowed me to further improve my skills using HTML, CSS, GitBash and GitHub along with teaching Bulma and working in an group setting.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+<footer>
+  Made with Love!
+</footer>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>  
     <script src="./assets/js/script.js"></script>
 </body>

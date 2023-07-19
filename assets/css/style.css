@@ -57,7 +57,6 @@ a {
 }
 
 /*Button To take over to Generator  */
-/*
 .buttonfrontpage {
     background-color: rgb(244, 209, 121);
     border: none;
@@ -95,37 +94,10 @@ a {
 
 img {
     border-radius: 40px;
-    width: 300px;
 }
-
-/*This is the form for Contact Us*/
-/*
-form {
-    border: 5px rgb(16, 140, 16);
-    border-style: solid;
-    background-color: rgb(212, 255, 221);
-    border-radius: 20px;
-    display: block;
-    margin: 50px;
-    font-size:medium;
-    padding: 30px;
-}
-
-h3 {
-
-}
-
-p {
-
-}
-
-.envelope {
-    border-radius: 25px;
-}
-
 
 /*This is a start for the Generator */ 
-/*
+
 .listeditems {
     display: flex;
     align-content: flex-start;
@@ -146,7 +118,7 @@ p {
     width: 189px;
 }
 
-#ingredients, #ingredientBtn, #selector {
+#ingredients, #ingredientBtn, .form-select, #generateBtn, #groceryBtn {
     text-align: center;
     display: block;
     margin-left: auto;
