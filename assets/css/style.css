@@ -3,6 +3,10 @@ html {
     background-color: rgb(165, 247, 165);
 }
 
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 /* This covers the header title on all pages*/
 
  #mainheader {
