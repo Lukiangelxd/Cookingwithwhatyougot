@@ -11,7 +11,7 @@
     </head>
     <body>
    <!--This is the Nav Bar that will have the same title on all pages and same style-->
-  <header id="mainheader" class="is-white">
+    <header id="mainheader" class="is-white">
       <h1 id="mainh1nav" class="is-size-1 has-text-centered is-size-3-mobile">Cooking With What You Got!</h1>
       <!-- added container class and moved has-text-centered to nav tag -->
       <nav class="container has-text-centered">
@@ -22,13 +22,14 @@
           <li class="column"><a href="saved.html">Saved Dishes</a></li>
         </ul>
       </nav>
-    </header>
+   </header>
 
-    <div class="column is-size-3 has-text-centered">
-      <h1 class="is-size-4-mobile is-size-1-desktop title">The Generator<h1>
-      <p class="is-size-6-mobile">The Generator can only add up to 10 ingredients for each dish. After you click the Create button, it will automatically display your dish below! Once you have begun a new dish the recipes will be displayed on the Saved Recipes page above. Enjoy creating!</p>
+   <div class="column is-size-3 has-text-centered">
+      <h1 id="generateT" class="is-size-4-mobile is-size-1-desktop title container is-max-mobile">The Generator<h1>
+      <p id="generateP" class="is-size-6-mobile">The Generator can only add up to 10 ingredients for each dish. After you click the Create button, it will automatically display your dish below! Once you have begun a new dish the recipes will be displayed on the Saved Recipes page above. Enjoy creating!</p>
     </div>
     
+  <div id="generateform">
         <button id="generateBtn">Generate Recipes!</button>
         <button id="groceryBtn">Find Nearby Restaurants</button>
 
@@ -45,8 +46,9 @@
     </form>
     <div id="recipeContainer"></div>
     <div id="restaurantContainer"></div>
+  </div>
     <footer></footer>
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 
 

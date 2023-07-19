@@ -103,7 +103,38 @@ img {
 
 /*This is a start for the Generator */ 
 
+/* border for paragraph */
+#generateP {
+  border: 5px rgb(16, 140, 16);
+  border-style: solid;
+  margin: 50px;
+  border-radius: 20px;
+  background-color: rgb(212, 255, 221);
+}
 
+/* border for form */
+#generateform {
+  border: 5px rgb(16, 140, 16);
+  border-style: solid;
+  margin: 50px;
+  border-radius: 20px;
+  background-color: rgb(212, 255, 221);
+}
+
+/* border for title */
+#generateT {
+  border: 5px goldenrod;
+  border-style: solid;
+  background-color: rgb(254, 219, 95);
+  margin-left: 600px;
+  margin-right: 600px;
+}
+
+/* margins for recipes */
+#recipeContainer {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
 
 #ingredients {
     width: 365px;
@@ -135,7 +166,8 @@ img {
     border-style: dashed;
     font-size: 18px;
     float: right;
-    margin-right: 10px;
+    margin-right: 15px;
+    margin-top: 15px;
   }
 
   #generateBtn:hover {
