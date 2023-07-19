@@ -16,14 +16,15 @@ $(function () {
     function formSubmit() {
         var listContainer = $('#container');
         var ingredients = $('#ingredients').val().trim();
-        var ingredientList = $('<li>');
+        var ingredientList = $('<li>').addClass('mb-4 has-text-underlined has-text-weight-bold');
         if (ingredients === '') {
             $('#ingredients').val('');
             $('#ingredients').attr('placeholder', 'Add the ingredients you have here!');
             return;
         }
         ingredientList.text(ingredients);
-        var removeBtn = $('<button>').text('Remove').addClass('button is-danger is-small is-responsive');
+        var removeBtn = $('<button>').text('Remove').addClass('button is-danger is-small is-responsive ml-4');
+        removeBtn.attr('type', 'button');
         removeBtn.on('click', function() {
             ingredientList.remove();
         });
@@ -39,7 +40,8 @@ $(function () {
     function generateRecipes() {
         var ingredientsArray = [];
         $('#container li').each(function () {
-            ingredientsArray.push($(this).text().trim());
+            var ingredientText = $(this).clone().children().remove().end().text().trim();
+            ingredientsArray.push(ingredientText);
         });
 
         var mealType = $('#mealType').val();
