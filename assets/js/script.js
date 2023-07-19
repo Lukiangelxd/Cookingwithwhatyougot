@@ -48,10 +48,10 @@ $(function () {
         
         fetchRecipes(ingredientsArray, mealType)
         .then(data => {
-            if(data.results.length === 0){
+            if(data.hits.length === 0){
                 displayError()
             } else {
-            displayRecipes(data.results)
+            displayRecipes(data)
     }});
     };
 
@@ -63,41 +63,50 @@ $(function () {
     }
 
     function fetchRecipes(ingredientsArray, mealType) {
-        var apiKey = 'c6db27357d8f494387f67c1e0ada60f5';
-        var apiUrl = 'https://api.spoonacular.com/recipes/complexSearch';
-        var queryString = `apiKey=${apiKey}&includeIngredients=${encodeURIComponent(ingredientsArray.join(','))}&type=${mealType}&addRecipeInformation=true`;
+        var apiId = '99e5feb6'
+        var apiKey = '3a64f009b218fd0ca76299a5367492d8';
+        var apiUrl = 'https://api.edamam.com/api/recipes/v2';
+        var queryString = `type=public&q=${encodeURIComponent(ingredientsArray.join(','))}&app_id=${apiId}&app_key=${apiKey}&mealType=${mealType}&random=true`;
         var queryUrl = `${apiUrl}?${queryString}`;
         return fetch(queryUrl)
-        .then(response => response.json())
+        .then(response => {
+            if (response.status !== 200) {
+                displayError();
+            }
+            return response.json();
+        })
         .then(data => {
+            console.log(data);
             return data;
         });
     };
 
-    function displayRecipes(recipes) {
+    function displayRecipes(data) {
+        var recipes = data.hits
         var recipeContainer = $('#recipeContainer');
         recipeContainer.empty();
         for (var i = 0; i < recipes.length; i++) {
-            var recipe = recipes[i];
+            var recipe = recipes[i].recipe;
             var recipeCard = $('<div>');
-            var recipeLink = $('<a>').attr('href', recipe.sourceUrl);
-            var recipeImage = $('<img>').attr('src', recipe.image).attr('alt', recipe.title);
-            var recipeTitle = $('<h3>').text(recipe.title);
+            var recipeLink = $('<a>').attr('href', recipe.url);
+            var recipeImage = $('<img>').attr('src', recipe.image).attr('alt', recipe.label);
+            var recipeTitle = $('<h3>').text(recipe.label);
             recipeLink.append(recipeImage, recipeTitle);
-            var saveBtn = $('<button>').text('Save');
+            var saveBtn = $('<button>').text('Save').data('recipe', recipe);
             saveBtn.on('click', function() {
-                saveRecipe(recipe.title, recipe.sourceUrl, recipe.image);
+                var savedRecipe = $(this).data('recipe');
+                saveRecipe(savedRecipe.label, savedRecipe.url, savedRecipe.image);
             });
             recipeCard.append(recipeLink, saveBtn);
             recipeContainer.append(recipeCard);
         }
     }
 
-    function saveRecipe(title, sourceUrl, image) {
+    function saveRecipe(label, url, image) {
         var savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
         var recipeObject = {
-            title: title,
-            sourceUrl: sourceUrl,
+            label: label,
+            url: url,
             image: image
         };
         savedRecipes.push(recipeObject);
@@ -111,9 +120,9 @@ $(function () {
         for (var i = 0; i < savedRecipes.length; i++) {
             var recipe = savedRecipes[i];
             var savedCard = $('<div>');
-            var savedLink = $('<a>').attr('href', recipe.sourceUrl);
-            var savedImage = $('<img>').attr('src', recipe.image).attr('alt', recipe.title);
-            var savedTitle = $('<h3>').text(recipe.title);
+            var savedLink = $('<a>').attr('href', recipe.url);
+            var savedImage = $('<img>').attr('src', recipe.image).attr('alt', recipe.label);
+            var savedTitle = $('<h3>').text(recipe.label);
             savedLink.append(savedImage, savedTitle);
             savedCard.append(savedLink);
             savedContainer.append(savedCard);
