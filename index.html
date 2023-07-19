@@ -10,10 +10,12 @@
 </head>
 <!--This is the Nav Bar that will have the same title on all pages and same style-->
 <body>
-    <header id="mainheader" class="is-white box">
+    <header id="mainheader" class="is-white">
         <h1 id="mainh1nav" class="is-size-1 has-text-centered">Cooking With What You Got!</h1>
-        <nav>
-          <ul class="is-size-4 has-text-centered columns is-mobile">
+        <!-- added container class and moved has-text-centered to nav tag -->
+        <nav class="container has-text-centered">
+          <!-- added -desktop to class for font size -->
+          <ul class="is-size-4-desktop columns is-mobile">
             <li class="column"><a href="index.html">Home</a></li>
             <li class="column"><a href="generator.html">The Generator</a></li>
             <li class="column"><a href="saved.html">Saved Dishes</a></li>
@@ -47,7 +49,7 @@
         <h3 class="is-size-3 has-text-weight-semibold">Hannah</h3>
         <!--Hannah needs info-->
         <p>I am Hannah hannah hannah......</p>
-        <img id="about" src="./assets/image/Wren Johnson.jpg" alt="picture of wren">
+        <img src="./assets/image/Wren Johnson.jpg" alt="picture of wren">
         <h3 class="is-size-3 has-text-weight-semibold">Wren</h3>
         <!--Wren needs info-->
         <p>Greetings! I'm Wren, one of the three developers working on this project. This was an exciting first project working with others. It has allowed me to further improve my skills using HTML, CSS, GitBash and GitHub along with teaching Bulma and working in an group setting.</p>
