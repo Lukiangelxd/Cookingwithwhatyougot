@@ -1,5 +1,8 @@
 
 $(function () {
+    $(document).on('click', '#navBtn', function() {
+        window.location.href= 'generator.html';
+    });
     $(document).on('click', '#ingredientBtn', function (event) {
         event.preventDefault();
         formSubmit();
@@ -20,7 +23,7 @@ $(function () {
             return;
         }
         ingredientList.text(ingredients);
-        var removeBtn = $('<button>').text('Remove');
+        var removeBtn = $('<button>').text('Remove').addClass('button is-danger is-small is-responsive');
         removeBtn.on('click', function() {
             ingredientList.remove();
         });
