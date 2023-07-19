@@ -96,8 +96,9 @@ a {
     background-color: rgb(212, 255, 221);
 }
 
-#img {
+img {
     border-radius: 40px;
+    display: block;
 }
 
 /*This is a start for the Generator */ 
