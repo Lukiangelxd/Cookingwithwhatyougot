@@ -23,23 +23,25 @@
         </ul>
       </nav>
     </header>
-        <section class="">
-            <h1 id="generator">The Generator</h1>
-            <p>The Generator can only add up to 10 ingredients for each dish. After you click the Create button, it will automatically display your dish below! Once you have begun a new dish the recipes will be displayed on the Saved Recipes page above. Enjoy creating!</p>
-        </section>
+
+    <div class="column is-size-3 has-text-centered">
+      <h1 class="is-size-3-mobile is-size-1-desktop title">The Generator<h1>
+      <p class="is-size-4-mobile">The Generator can only add up to 10 ingredients for each dish. After you click the Create button, it will automatically display your dish below! Once you have begun a new dish the recipes will be displayed on the Saved Recipes page above. Enjoy creating!</p>
+    </div>
     
+        <button id="generateBtn">Generate Recipes!</button>
+        <button id="groceryBtn">Find Nearby Restaurants</button>
+
     <form>
         <select id="mealType" class="form-select" aria-label="Default select example">
             <option selected>Choose your meal type!</option>
             <option value="breakfast">Breakfast</option>
             <option value="snack">Snack</option>
             <option value="main+course">Dinner</option>
-          </select>
+        </select>
         <input type="text" id="ingredients" placeholder="Add the ingredients you have here!"><br>
         <button id="ingredientBtn">Add Ingredient</button>
         <div id="container"></div>
-        <button id="generateBtn">Generate Recipes!</button>
-        <button id="groceryBtn">Find Nearby Restaurants</button>
     </form>
 
     <div id="recipeContainer"></div>

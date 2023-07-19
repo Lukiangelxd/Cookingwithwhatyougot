@@ -1,5 +1,5 @@
 
-body {
+html {
     background-color: rgb(165, 247, 165);
 }
 
@@ -98,17 +98,7 @@ img {
 
 /*This is a start for the Generator */ 
 
-.listeditems {
-    display: flex;
-    align-content: flex-start;
-    border-style: solid rgb(4, 128, 25);
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 30px 0px;
-}
 
-#selector {
-    width: 17%;
-}
 
 #ingredients {
     width: 365px;
@@ -118,16 +108,89 @@ img {
     width: 189px;
 }
 
-#ingredients, #ingredientBtn, .form-select, #generateBtn, #groceryBtn {
+#ingredients, #ingredientBtn, .form-select {
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
     font-size: 21px;
+    color: rgb(0, 0, 0);
+    font-family:'Times New Roman', Times, serif;
 }
+
+#generateBtn, #groceryBtn{
+    background-color: rgb(244, 209, 121);
+    color: rgb(0, 0, 0);
+    font-family:'Times New Roman', Times, serif;
+    padding: 15px 32px;
+    height: 50px;
+    border: goldenrod;
+    border-radius: 10px;
+    border-style: dashed;
+    font-size: 18px;
+    float: right;
+    margin-right: 10px;
+  }
+
+  #generateBtn:hover {
+    border-style: solid;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  
+  #groceryBtn:hover {
+    border-style: solid;
+    font-style: italic;
+    font-weight: bold;
+  }
 
 form {
-    margin-top: 67px;
+    margin-top: 88px;
 }
 
-/*
+select:not(:checked) { 
+    background-color: rgb(244, 209, 121);
+    border-radius: 10px;
+    border: 0px;
+    margin-bottom: 10px;
+    height: 50px;
+    margin-top: 117px;
+}
+
+input {
+    background-color: rgb(244, 209, 121);
+    border-radius: 10px;
+    border: 2px;
+    height: 50px;
+}
+
+::placeholder {
+    color: black;
+}
+
+#ingredientBtn {
+    background-color: rgb(244, 209, 121);
+    color: rgb(0, 0, 0);
+    font-family:'Times New Roman', Times, serif;
+    padding: 15px 32px;
+    height: 50px;
+    border: goldenrod;
+    border-radius: 10px;
+    border-style: dashed;
+    font-size: 18px;
+  }
+  
+  #ingredientBtn:hover {
+    border-style: solid;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  #container {
+    color: rgb(0, 0, 0);
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin-left: 31px;
+    margin-top: 30px;
+  }

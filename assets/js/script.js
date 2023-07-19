@@ -23,7 +23,7 @@ $(function () {
             return;
         }
         ingredientList.text(ingredients);
-        var removeBtn = $('<button>').text('Remove').addClass('button is-danger is-small is-responsive ml-4');
+        var removeBtn = $('<button>').text('Remove').addClass('button is-danger is-small is-responsive ml-4 is-rounded');
         removeBtn.attr('type', 'button');
         removeBtn.on('click', function() {
             ingredientList.remove();
