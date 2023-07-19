@@ -56,9 +56,6 @@ a {
     text-shadow: 2px 2px 2px rgb(73, 149, 86);
 }
 
-img {
-  border-radius: 10px;
-}
 /*Button To take over to Generator  */
 #navBtn {
     background-color: rgb(244, 209, 121);
