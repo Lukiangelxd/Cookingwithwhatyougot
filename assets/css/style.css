@@ -39,6 +39,11 @@ a {
     color: rgb(250, 184, 0);
   }
 
+#burger {
+    width: 400px;
+    height: 450px;
+}
+
 /* Main page div containing info to generator */
 
 #generatordiv {
@@ -93,7 +98,7 @@ a {
     background-color: rgb(212, 255, 221);
 }
 
-img {
+#about {
     border-radius: 40px;
     width: 300px;
 }
