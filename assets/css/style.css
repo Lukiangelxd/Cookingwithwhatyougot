@@ -56,9 +56,6 @@ a {
     text-shadow: 2px 2px 2px rgb(73, 149, 86);
 }
 
-img {
-  border-radius: 10px;
-}
 /*Button To take over to Generator  */
 #navBtn {
     background-color: rgb(244, 209, 121);
@@ -99,8 +96,9 @@ img {
     background-color: rgb(212, 255, 221);
 }
 
-#img {
+img {
     border-radius: 40px;
+    display: block;
 }
 
 /*This is a start for the Generator */ 
