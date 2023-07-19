@@ -118,6 +118,7 @@ img {
     font-family:'Times New Roman', Times, serif;
 }
 
+/*This makes two of the buttons the same as the home page button */
 #generateBtn, #groceryBtn{
     background-color: rgb(244, 209, 121);
     color: rgb(0, 0, 0);
@@ -149,6 +150,7 @@ form {
     margin-top: 88px;
 }
 
+/* This changed the color of the selector */
 select:not(:checked) { 
     background-color: rgb(244, 209, 121);
     border-radius: 10px;
@@ -158,6 +160,7 @@ select:not(:checked) {
     margin-top: 117px;
 }
 
+/* this changed the color of the input element */
 input {
     background-color: rgb(244, 209, 121);
     border-radius: 10px;
@@ -169,6 +172,7 @@ input {
     color: black;
 }
 
+/* this styled the ingredients button to be the same as the home page button */
 #ingredientBtn {
     background-color: rgb(244, 209, 121);
     color: rgb(0, 0, 0);
@@ -187,6 +191,7 @@ input {
     font-weight: bold;
   }
 
+  /* this styes the ingredients list */
   #container {
     color: rgb(0, 0, 0);
     font-family:'Times New Roman', Times, serif;
