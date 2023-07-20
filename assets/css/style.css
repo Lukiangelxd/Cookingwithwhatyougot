@@ -31,19 +31,13 @@ img {
     text-shadow: 5px 3px 3px rgb(4, 128, 25);
 } 
 
-a {
+#navBar {
     color: white;
     text-shadow: 5px 3px 3px rgb(4, 128, 25);
 }
 /* nav links to help stay in place on all pages */ 
 
-#header-li li {
-    color: white; 
-    font-size: 20px;
-    text-shadow: 5px rgb(4, 128, 25);
-  }
-
-  a:hover {
+  #navBar:hover {
     color: rgb(250, 184, 0);
   }
 
@@ -314,3 +308,16 @@ input {
     margin-left: 31px;
     margin-top: 30px;
   }
+
+a {
+  color: rgb(16, 140, 16);
+}
+
+a:hover {
+  color: black;
+}
+
+#restaurantContainer {
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
