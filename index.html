@@ -24,15 +24,29 @@
         </nav>
       </header>
       <!--This is the first div of the Main page. States purpose and links to third party API-->
-      <section class="section">
+      <section id="generatediv" class="section">
         <div class="container">
           <div class="columns is-vcentered is-multiline">
             <div class="column is-6-tablet is-5-desktop has-text-centered">
-              <img src="./assets/image/Burger copy.jpg" alt="burger logo" class="px-6">
+              <img src="./assets/image/Burger copy.jpg" alt="burger logo">
             </div>
             <div class="column is-size-4 is-6-tablet is-7-desktop">
-              <h1 class="is-size-3-mobile is-size-1-desktop title has-text-centered">Welcome to Cooking with what you got!</h1>
-              <p class="has-text-centered">Our team is proud to serve you and your budgets needs with this newly designed recipe generator! Using the technology of a third party API, we are able to take the limited supplies you have in your kicthe to give you personally sculpted dishes tailored just to you.</p>
+              <div id="welcomediv">
+                <h1 class="is-size-3-mobile is-size-1-desktop subtitle has-text-centered">Welcome to Cooking with what you got!</h1>
+                <p class="has-text-centered">Our team is proud to serve you and your budgets needs with this newly designed recipe generator! Using the technology of a third party API, we are able to take the limited supplies you have in your kicthe to give you personally sculpted dishes tailored just to you.</p>
+              </div>
+              <div class="column is-size-3 has-text-centered is-centered">
+                <div id="welcomeContainer">
+                  <div class="star1">
+                    <img class="column" src="./assets/image/stars.jpg" alt="stars">
+                  </div>
+                  <div class="text">
+                    <h1 class="is-size-2-desktop has-text-centered title">Try The Generator Today!</h1>
+                  </div>
+                  <div class="star2">
+                    <img id="fire" class="column" src="./assets/image/stars.jpg" alt="stars">
+                  </div>
+                </div>
               <button id="navBtn">Let's Make Some Magic!</button>
             </div>
           </div>
@@ -45,7 +59,7 @@
         <div class="container">
           <div class="columns is-vcentered is-multiline">
             <div class="column is-6-tablet is-5-desktop has-text-centered">
-              <img src="./assets/image/Christopher Lunsford.JPG" alt="chris image" class="px-6">
+              <img id="aboutImg" src="./assets/image/Christopher Lunsford.JPG" alt="chris image">
             </div>
             <div class="column is-size-4 is-6-tablet is-7-desktop">
               <h1 class="is-size-3-mobile is-size-1-desktop title">Chris</h1>
@@ -58,12 +72,12 @@
       <section class="section">
         <div class="container">
           <div class="columns is-vcentered is-multiline">
-            <div class="column is-6-tablet is-5-desktop has-text-centered">
-              <img src="./assets/image/Hannah McEvoy.jpg" alt="hannah image" class="px-6">
-            </div>
             <div class="column is-size-4 is-6-tablet is-7-desktop">
               <h1 class="is-size-3-mobile is-size-1-desktop title">Hannah</h1>
               <p> <p>Hey I'm Hannah and in the first group project of the class our team has chosen to go with a recipe generator! I love this choice because I am a self taught baker at home with a tiny budget. My key positions in this group project is creating the wireframing of the webpage using photoshop, choosing a CSS framework and being the overall overseer of the project.</p>
+            </div>
+            <div class="column is-6-tablet is-5-desktop has-text-centered">
+              <img id="aboutImg" src="./assets/image/Hannah McEvoy.jpg" alt="hannah image">
             </div>
           </div>
         </div>
@@ -73,7 +87,7 @@
         <div class="container"> 
           <div class="columns is-vcentered is-multiline">
             <div class="column is-6-tablet is-5-desktop has-text-centered">
-              <img src="./assets/image/Wren Johnson.jpg" alt="wren image" class="px-6">
+              <img id="aboutImg" src="./assets/image/Wren Johnson.jpg" alt="wren image">
             </div>
             <div class="column is-size-4 is-6-tablet is-7-desktop">
               <h1 class="is-size-3-mobile is-size-1-desktop title">Wren</h1>
