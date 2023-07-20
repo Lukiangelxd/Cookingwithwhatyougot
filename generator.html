@@ -24,24 +24,35 @@
       </nav>
    </header>
 
-   <div class="column is-size-3 has-text-centered">
-      <h1 id="generateT" class="is-size-4-mobile is-size-1-desktop title container is-max-mobile has-text-weight-bold">The Generator<h1>
-      <p id="generateP" class="is-size-6-mobile">The Generator can only add up to 10 ingredients for each dish. After you click the Create button, it will automatically display your dish below! Once you have begun a new dish the recipes will be displayed on the Saved Recipes page above. Enjoy creating!</p>
+   <div class="column is-size-3 has-text-centered is-centered">
+    <div id="generatorContainer">
+      <div class="image1">
+        <img id="fire" class="column" src="./assets/image/fire.jpg" alt="fire drawing">
+      </div>
+      <div class="text">
+        <h1 id="generateT" class="is-size-4-mobile is-size-1-desktop title container is-max-mobile has-text-weight-bold">The Generator<h1>
+      </div>
+      <div class="image2">
+        <img id="fire" class="column" src="./assets/image/fire.jpg" alt="fire drawing">
+      </div>
+    </div>
+    
+      <p id="generateP" class="is-size-6-mobile is-centered">The Generator can only add up to 10 ingredients for each dish. After you click the Create button, it will automatically display your dish below! Once you have begun a new dish the recipes will be displayed on the Saved Recipes page above. Enjoy creating!</p>
     </div>
     
   <div id="generateform">
-        <button id="generateBtn">Generate Recipes!</button>
-        <button id="groceryBtn">Find Nearby Restaurants</button>
+        <button id="generateBtn" class="is-size-7-mobile">Generate Recipes!</button>
+        <button id="groceryBtn" class="is-size-7-mobile">Find Nearby Restaurants</button>
 
-    <form>
-        <select id="mealType" class="form-select" aria-label="Default select example">
+    <form >
+        <select id="mealType" class="form-select is-size-7-mobile" aria-label="Default select example">
             <option selected>Choose your meal type!</option>
             <option value="breakfast">Breakfast</option>
             <option value="lunch">Lunch</option>
             <option value="dinner">Dinner</option>
           </select>
-        <input type="text" id="ingredients" placeholder="Add the ingredients you have here!"><br>
-        <button id="ingredientBtn">Add Ingredient</button>
+        <input class="is-size-7-mobile"type="text" id="ingredients" placeholder="Add the ingredients you have here!"><br>
+        <button class="is-size-7-mobile" id="ingredientBtn">Add Ingredient</button>
         <div id="container"></div>
     </form>
     <div id="recipeContainer"></div>
