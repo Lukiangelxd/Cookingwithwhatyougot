@@ -75,9 +75,15 @@ a {
   justify-content: center;
  }
 
+ @media screen and (max-width: 1023px) {
+  #welcomeContainer {
+    grid-template-columns: 45px 227px 74px;
+  }
+}
+
 .star1, .star2 {
   width: 76px;
-  height: 98px;
+  height: 70px;
  }
 
  .star1 {
