@@ -17,6 +17,10 @@ body {
     border-color: rgb(16, 140, 16);
 }
 
+img {
+  border-radius: 40px;
+}
+
 /*nav bar on all pages*/
 
 #mainh1nav {
@@ -45,20 +49,48 @@ a {
 
 /* Main page div containing info to generator */
 
-#generatordiv {
-    border: 5px rgb(16, 140, 16);
-    border-style: solid;
-    background-color: rgb(212, 255, 221);
-    border-radius: 20px;
+#generatediv {
+  border: 5px rgb(16, 140, 16);
+  border-style: solid;
+  border-radius: 20px;
+  background-color: rgb(212, 255, 221);
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
 
-}
-#generatordivburger {
-    border-radius: 40px;
+#welcomediv {
+  border: 5px white;
+  border-style: solid;
+  border-radius: 20px;
 }
 
-#h2seconddivforfrontpage {
-    text-shadow: 2px 2px 2px rgb(73, 149, 86);
+#welcomeContainer {
+  display: grid;
+  grid-template-columns: 72px 507px 66px;
+  column-gap: 5px;
+  align-items: center;
+  justify-content: center;
+ }
+
+ @media screen and (max-width: 1023px) {
+  #welcomeContainer {
+    grid-template-columns: 45px 227px 74px;
+  }
 }
+
+.star1, .star2 {
+  width: 76px;
+  height: 70px;
+ }
+
+ .star1 {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+ }
+
 
 /*Button To take over to Generator  */
 #navBtn {
@@ -100,8 +132,8 @@ a {
     background-color: rgb(212, 255, 221);
 }
 
-img {
-    border-radius: 40px;
+#aboutImg {
+  width: 394px;
 }
 
 /*This is a start for the Generator */ 
