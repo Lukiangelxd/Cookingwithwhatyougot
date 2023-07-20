@@ -3,6 +3,10 @@ html {
     background-color: rgb(165, 247, 165);
 }
 
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 /* This covers the header title on all pages*/
 
  #mainheader {
@@ -98,18 +102,54 @@ a {
 
 img {
     border-radius: 40px;
-    display: block;
 }
 
 /*This is a start for the Generator */ 
+
+/* border for title */
+#generateT {
+  border: 5px goldenrod;
+  border-style: solid;
+  background-color: rgb(254, 219, 95);
+}
+
+/* this comtrols placement of title */
+#generatorContainer {
+  display: grid;
+  grid-template-columns: 92px 412px 92px;
+  column-gap: 5px;
+  align-items: center;
+  justify-content: center;
+ }
+
+ @media screen and (max-width: 1023px) {
+  #generatorContainer {
+    grid-template-columns: 76px 227px 76px;
+  }
+}
+
+
+ 
+ .image1, .image2 {
+  width: 76px;
+  height: 98px;
+ }
+
+ .image1 {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+ }
 
 /* border for paragraph */
 #generateP {
   border: 5px rgb(16, 140, 16);
   border-style: solid;
-  margin: 50px;
   border-radius: 20px;
   background-color: rgb(212, 255, 221);
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* border for form */
@@ -119,15 +159,6 @@ img {
   margin: 50px;
   border-radius: 20px;
   background-color: rgb(212, 255, 221);
-}
-
-/* border for title */
-#generateT {
-  border: 5px goldenrod;
-  border-style: solid;
-  background-color: rgb(254, 219, 95);
-  margin-left: 600px;
-  margin-right: 600px;
 }
 
 /* margins for recipes */
@@ -143,6 +174,13 @@ img {
 #ingredientBtn {
     width: 189px;
 }
+
+@media screen and (max-width: 1023px) {
+  #ingredients {
+    width: 189px;
+  }
+}
+
 
 #ingredients, #ingredientBtn, .form-select {
     text-align: center;
@@ -183,6 +221,14 @@ img {
     font-weight: bold;
   }
 
+  @media screen and (max-width: 1023px) {
+    #groceryBtn, #generateBtn, #ingredientBtn {
+      width: 114px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  }
+  
 form {
     margin-top: 88px;
 }
