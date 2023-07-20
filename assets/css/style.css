@@ -139,7 +139,7 @@ img {
   background-color: rgb(254, 219, 95);
 }
 
-/* this comtrols placement of title */
+/* this comtrols placemment of title */
 #generatorContainer {
   display: grid;
   grid-template-columns: 92px 412px 92px;
