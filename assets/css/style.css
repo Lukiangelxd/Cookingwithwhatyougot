@@ -321,3 +321,12 @@ a:hover {
   margin-bottom: 15px;
   margin-left: 15px;
 }
+
+/*Thiss is for the Saved Recipes Page */
+ #clipboardsize {
+  height: 980px;
+  display:block;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+ }
