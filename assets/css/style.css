@@ -329,5 +329,15 @@ a:hover {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 35px;
+  background-image: url(/assets/image/Clipboard.png);
+  background-repeat: none;
+ }
 
+ #savedContainer {
+  display: grid;
+  grid-template-columns: 250px 250px;
+  column-gap: 15px;
+  align-items: center;
+  justify-content: center;
  }
