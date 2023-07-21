@@ -15,12 +15,12 @@ $(function () {
     function formSubmit() {
         var listContainer = $('#container');
         var ingredients = $('#ingredients').val().trim();
-        var ingredientList = $('<li>').addClass('mb-4 has-text-underlined has-text-weight-bold');
+        var ingredientList = $('<li>').addClass('mb-4 has-text-weight-bold');
         if (ingredients === '') {
             $('#ingredients').val('');
             $('#ingredients').attr('placeholder', 'Add the ingredients you have here!');
             return;
-        }
+        };
         ingredientList.text(ingredients);
         var removeBtn = $('<button>').text('Remove').addClass('button is-danger is-small is-responsive ml-4 is-rounded');
         removeBtn.attr('type', 'button');
@@ -30,7 +30,8 @@ $(function () {
         ingredientList.append(removeBtn);
         listContainer.append(ingredientList);
         $('#ingredients').val('');
-    }
+    };
+
     $(document).on('click', '#generateBtn', function(event) {
         event.preventDefault();
         generateRecipes();
@@ -59,7 +60,7 @@ $(function () {
         recipeContainer.empty()
         var errorMessage = $('</p>').text('No recipes found that include all the above ingredients. Please amend your ingredient list or make sure to select a meal type and try again!');
         recipeContainer.append(errorMessage);
-    }
+    };
 
     function fetchRecipes(ingredientsArray, mealType) {
         var apiId = '99e5feb6'
@@ -91,15 +92,15 @@ $(function () {
             var recipeImage = $('<img>').attr('src', recipe.image).attr('alt', recipe.label);
             var recipeTitle = $('<h3>').text(recipe.label);
             recipeLink.append(recipeImage, recipeTitle);
-            var saveBtn = $('<button>').text('Save').data('recipe', recipe);
+            var saveBtn = $('<button>').text('Save').data('recipe', recipe).addClass('button is-success is-small is-responsive m-4 is-rounded');
             saveBtn.on('click', function() {
                 var savedRecipe = $(this).data('recipe');
                 saveRecipe(savedRecipe.label, savedRecipe.url, savedRecipe.image);
             });
             recipeCard.append(recipeLink, saveBtn);
             recipeContainer.append(recipeCard);
-        }
-    }
+        };
+    };
 
     function saveRecipe(label, url, image) {
         var savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
@@ -121,31 +122,37 @@ $(function () {
             var savedCard = $('<div>');
             var savedLink = $('<a>').attr('href', recipe.url);
             var savedImage = $('<img>').attr('src', recipe.image).attr('alt', recipe.label);
-            var savedTitle = $('<h3>').text(recipe.label);
+            var savedTitle = $('<h3>').text(recipe.label).addClass('savedTitle');
             savedLink.append(savedImage, savedTitle);
             var savedRemoveBtn = $('<button>').text('Remove').addClass('button is-danger is-small is-responsive ml-4 is-rounded');
             savedRemoveBtn.on('click', handleRemoveRecipe(recipe));
             savedCard.append(savedLink, savedRemoveBtn);
             savedContainer.append(savedCard);
-        }
-    }
+        };
+    };
 
     function handleRemoveRecipe(recipe) {
         return function () {
             removeRecipe(recipe);
             displaySavedRecipes();
         };
-    }
+    };
 
     function removeRecipe(recipe) {
         var savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
         var updatedRecipes = savedRecipes.filter(item => item.label !== recipe.label);
         localStorage.setItem('savedRecipes', JSON.stringify(updatedRecipes));
-    }
+    };
 
     if(window.location.pathname.includes('saved.html')) {
         displaySavedRecipes();
-    }
+    };
+
+    var savedRecipes = JSON.parse(localStorage.getItem('savedRecipes'));
+    if (savedRecipes.length === 0) {
+        var borderHide = $('#savedBorder');
+        borderHide.addClass('hidden');
+    };
 
     $(document).on('click', '#groceryBtn', function(event) {
         event.preventDefault();
@@ -197,8 +204,8 @@ $(function () {
             restaurantLink.append(restaurantTitle);
             restaurantCard.append(restaurantLink);
             restaurantContainer.append(restaurantCard);
-        }
+        };
     };
 
 
-})
+});
