@@ -1,4 +1,3 @@
-
 $(function () {
     $(document).on('click', '#navBtn', function() {
         window.location.href= 'generator.html';
@@ -58,7 +57,7 @@ $(function () {
     function displayError() {
         var recipeContainer = $('#recipeContainer');
         recipeContainer.empty()
-        var errorMessage = $('</p>').text('No recipes found that include all the above ingredients. Please amend your ingredient list and try again!');
+        var errorMessage = $('</p>').text('No recipes found that include all the above ingredients. Please amend your ingredient list or make sure to select a meal type and try again!');
         recipeContainer.append(errorMessage);
     }
 
@@ -124,10 +123,26 @@ $(function () {
             var savedImage = $('<img>').attr('src', recipe.image).attr('alt', recipe.label);
             var savedTitle = $('<h3>').text(recipe.label);
             savedLink.append(savedImage, savedTitle);
-            savedCard.append(savedLink);
+            var savedRemoveBtn = $('<button>').text('Remove').addClass('button is-danger is-small is-responsive ml-4 is-rounded');
+            savedRemoveBtn.on('click', handleRemoveRecipe(recipe));
+            savedCard.append(savedLink, savedRemoveBtn);
             savedContainer.append(savedCard);
         }
     }
+
+    function handleRemoveRecipe(recipe) {
+        return function () {
+            removeRecipe(recipe);
+            displaySavedRecipes();
+        };
+    }
+
+    function removeRecipe(recipe) {
+        var savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
+        var updatedRecipes = savedRecipes.filter(item => item.label !== recipe.label);
+        localStorage.setItem('savedRecipes', JSON.stringify(updatedRecipes));
+    }
+
     if(window.location.pathname.includes('saved.html')) {
         displaySavedRecipes();
     }
