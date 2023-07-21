@@ -331,13 +331,58 @@ a:hover {
   border-radius: 20px;
   background-color: rgb(212, 255, 221);
   margin-top: 5px;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
  #savedContainer {
   display: grid;
-  grid-template-columns: 250px 250px 250px;
+  grid-template-columns: 250px 250px 250px 250px 250px;
   column-gap: 15px;
   align-items: center;
   justify-content: center;
   margin-top: 15px;
+  margin-bottom: 15px;
  }
+
+ @media screen and (max-width: 1560px) {
+  #savedContainer {
+    grid-template-columns: 250px 250px 250px 250px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+ @media screen and (max-width: 1024px) {
+  #savedContainer {
+    grid-template-columns: 250px 250px 250px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  #savedContainer {
+    grid-template-columns: 250px 250px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+ #savedContainer {
+   grid-template-columns: 250px;
+   align-items: center;
+   justify-content: center;
+   margin-top: 15px;
+   margin-bottom: 15px;
+ }
+}
