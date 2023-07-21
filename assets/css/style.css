@@ -311,6 +311,7 @@ input {
 
 a {
   color: rgb(16, 140, 16);
+
 }
 
 a:hover {
@@ -323,21 +324,20 @@ a:hover {
 }
 
 /*This is for the Saved Recipes Page */
- #clipboardsize {
-  height: 980px;
-  display:block;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 35px;
-  background-image: url(/assets/image/Clipboard.png);
-  background-repeat: none;
- }
+
+#savedBorder {
+  border: 5px rgb(16, 140, 16);
+  border-style: solid;
+  border-radius: 20px;
+  background-color: rgb(212, 255, 221);
+  margin-top: 5px;
+}
 
  #savedContainer {
   display: grid;
-  grid-template-columns: 250px 250px;
+  grid-template-columns: 250px 250px 250px;
   column-gap: 15px;
   align-items: center;
   justify-content: center;
+  margin-top: 15px;
  }
