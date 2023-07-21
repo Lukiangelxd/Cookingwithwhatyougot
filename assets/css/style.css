@@ -345,3 +345,8 @@ a:hover {
   justify-content: center;
   margin-top: 15px;
 
+ }
+
+ .hidden {
+  display: none;
+ }
