@@ -344,8 +344,48 @@ a:hover {
   align-items: center;
   justify-content: center;
   margin-top: 15px;
-
+  margin-bottom: 15px;
  }
+
+ @media screen and (max-width: 1560px) {
+  #savedContainer {
+    grid-template-columns: 250px 250px 250px 250px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+ @media screen and (max-width: 1024px) {
+  #savedContainer {
+    grid-template-columns: 250px 250px 250px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  #savedContainer {
+    grid-template-columns: 250px 250px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+ #savedContainer {
+   grid-template-columns: 250px;
+   align-items: center;
+   justify-content: center;
+   margin-top: 15px;
+   margin-bottom: 15px;
+ }
+}
 
  .hidden {
   display: none;
