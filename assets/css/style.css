@@ -69,7 +69,7 @@ img {
   justify-content: center;
  }
 
- @media screen and (max-width: 1023px) {
+ @media screen and (max-width: 1299px) {
   #welcomeContainer {
     grid-template-columns: 45px 227px 74px;
   }
