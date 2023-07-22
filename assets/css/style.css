@@ -201,7 +201,7 @@ img {
     width: 189px;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 800px) {
   #ingredients {
     width: 189px;
   }
@@ -247,7 +247,7 @@ img {
     font-weight: bold;
   }
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 482px) {
     #groceryBtn, #generateBtn, #ingredientBtn {
       width: 114px;
       height: auto;
