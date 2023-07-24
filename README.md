@@ -10,7 +10,9 @@ For the API's the team used Foursquare, Fetch, Geolocation and Edamam. The respo
 Most of the challenges we faced as a team was within CSS and Javascript. The CSS framemwork was very easy to grasp the basic understandings but the application was a bit trickier when paired with vanilla CSS along side the id and class tags. One main issues with the CSS was making sure the media screen was more compatable with other screen sizes such as mobile. When making the webpage reflect the original framework we made changes based off of the realization of how difficult it would be to execute. The main challenges faced while writing the JavaScript code were constructing the query strings for the API and deciding on which APIs to use. To solve the problem of constructing the query string, we looked into encodeURIComponent, new URLSearchParams, and template literals to deal with special characters in the URL. When it came to deciding on which API to use, we originally planned on Spoonacular for the recipes and Yelp for the restaurants. After reading more carefully through Spoonacular's terms, we decided against posting that API Key to a public repo. Meanwhile Yelp was giving us issues with cross-origin resource sharing, so we pivoted to the FourSquare API to achieve our desired outcome.
 
 ### Wireframing
-*add photo*
+#### We Made a front page using figma as well as an idea for how the generator will look
+![Front Page](https://github.com/Lukiangelxd/Cookinwithwhatyougot/assets/133689246/8a5f770a-b8c9-4e80-8fb8-9e308a6478b9)
+![Generator](https://github.com/Lukiangelxd/Cookinwithwhatyougot/assets/133689246/8242d5c6-9958-4366-9e78-1a6cf12a5d2f)
 
 ## Reference
 The API's:
@@ -19,7 +21,7 @@ The API's:
 [Geolocation]
 [Edamam] (https://api.edamam.com/api/recipes/v2)
 [Bulma] (https://bulma.io/)
-
+[Figma] (https://www.figma.com/files/recents-and-sharing?fuid=1260988429407494569)
 ### Team Collaboration
 
 For the majority of the project we spent toagther we shared screens and delegated the tasks to work amongst one another. The commits to the project are not a full reflection as to the work done as to some work was spent with one another. Wren and Hannah focused on The CSS and HTML framework while Chris focused on the main Javascript and API work.
