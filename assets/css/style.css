@@ -69,7 +69,7 @@ img {
   justify-content: center;
  }
 
- @media screen and (max-width: 1023px) {
+ @media screen and (max-width: 1299px) {
   #welcomeContainer {
     grid-template-columns: 45px 227px 74px;
   }
@@ -201,7 +201,7 @@ img {
     width: 189px;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 800px) {
   #ingredients {
     width: 189px;
   }
@@ -247,7 +247,7 @@ img {
     font-weight: bold;
   }
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 482px) {
     #groceryBtn, #generateBtn, #ingredientBtn {
       width: 114px;
       height: auto;
@@ -345,6 +345,7 @@ a:hover {
   justify-content: center;
   margin-top: 15px;
   margin-bottom: 15px;
+
  }
 
  @media screen and (max-width: 1560px) {
